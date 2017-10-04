@@ -5,7 +5,7 @@ import Header from './Header'
 import Nav from './Nav'
 import Nav2 from './Nav2'
 import Intro from './Intro'
-
+import View from './View'
 
 import data from '../../data/ranks'
 
@@ -14,23 +14,28 @@ const App = () => {
   return (
     <Router>
       <div className='container'>
-        <Route path="/" component={Header} />
 
         <div className="row">
-
-          <div className = "col s3">
-            <Route path="/" component={props => <Nav ranks={ranks} /> } />
+          <div className="col s3">
+            <Route path="/" component={Header} />
           </div>
-
-          <div className="col s9">
+          <div className="col s3">
             <Route exact path="/" component={Intro} />
           </div>
-
-          <div className="col s3">
-            <Route exact path="/list/:rank" component={Nav2} />
-          </div>
-
         </div>
+
+        <div className="row">
+          <div className = "col s2">
+            <Route path="/" component={props => <Nav ranks={ranks} /> } />
+          </div>
+          <div className="col s2">
+            <Route path="/list/:rank" component={Nav2} />
+          </div>
+          <div className="col s4">
+            <Route exact path="/list/:rank/:name" component={View} />
+          </div>
+        </div>
+
       </div>
     </Router>
   )

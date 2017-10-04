@@ -8,17 +8,20 @@ function cap(string) {
 }
 
 const Nav2 = (props) => {
-
-const rank = cap(props.match.params.rank)
-const rankArray = []
-
+  const rank = props.match.params.rank
+  const rankArray = data[rank]
 
   return (
     <div>
-      <h5>{rank}</h5>
+      <h5>{cap(rank)}</h5>
       <ul>
-        <li>1</li>
-        <li>2</li>
+        {rankArray.map((e, key) => {
+          return <li key={key}>
+            <Link to={`/list/${rank}/${e.name}`}>
+              {(e.name)}
+            </Link>
+          </li>
+        })}
       </ul>
     </div>
   )
