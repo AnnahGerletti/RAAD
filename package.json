@@ -2,7 +2,7 @@
   "name": "RAAD",
   "version": "0.1.0",
   "description": "RADD",
-  "repository": "",
+  "repository": "https://github.com/aaron-macdonald/RAAD.git",
   "main": "server/index.js",
   "scripts": {
     "start": "nodemon --watch server server/index & webpack --watch",
