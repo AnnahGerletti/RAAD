@@ -6,7 +6,7 @@ import Inprogress from './Inprogress'
 import Blocked from './Blocked'
 import Done from './Done'
 
-const Container = () => {
+const Container = (props) => {
   return (
     <div className = 'columns'>
       <Route path="/" component={Todo} />
