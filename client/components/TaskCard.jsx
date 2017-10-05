@@ -4,26 +4,32 @@ class TaskCard extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      moveTask: false
+      col_State: 0
     }
+    this.moveForward =this.moveForward.bind(this)
+  }
+  moveForward () {
+    this.setState({
+      col_State: this.state.col_State++
+    })
   }
   render () {
     return (
-      <div class="card is-primary">
-        <header class="card-header">
-          <p class="card-header-title">
+      <div className="card is-primary">
+        <header className="card-header">
+          <p className="card-header-title">
             Task 1
           </p>
         </header>
-        <div class="card-content">
-          <p class="title">
+        <div className="card-content">
+          <p className="">
             “Finish the project”
           </p>
         </div>
-        <footer class="card-footer">
-          <a href="#" class="card-footer-item">-</a> {' '}
-          <a href="#" class="card-footer-item">Edit</a> {' '}
-          <a href="#" class="card-footer-item">+</a>
+        <footer className="card-footer">
+          <button className="card-footer-item">-</button>
+          <button className="card-footer-item">Edit</button>
+          <button className="card-footer-item" onClick={this.moveForward}>+</button>
         </footer>
       </div>
     )
