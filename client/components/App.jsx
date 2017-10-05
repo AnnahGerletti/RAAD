@@ -3,7 +3,7 @@ import {HashRouter as Router, Route} from 'react-router-dom'
 
 import Header from './Header'
 
-import data from '../../data/ranks'
+import data from '../../data/tasks'
 
 const App = () => {
   return (

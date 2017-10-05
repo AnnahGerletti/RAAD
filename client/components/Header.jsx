@@ -2,7 +2,12 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <h1>RAAD</h1>
+    <section classname="section">
+      <div classname="container">
+        <h1 classname="title">Bulma title class</h1>
+        <h1 classname="title">Bulmas css not working in jsx</h1>
+      </div>
+    </section>
   )
 }
 

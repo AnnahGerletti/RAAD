@@ -26,10 +26,10 @@
     "enzyme": "^2.7.0",
     "jsx-loader": "^0.13.2",
     "nodemon": "^1.11.0",
-    "react": "^16.0.0",
-    "react-addons-test-utils": "^15.6.2",
-    "react-dom": "^16.0.0",
-    "react-router-dom": "^4.2.2",
+    "react": "^15.4.2",
+    "react-addons-test-utils": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-router-dom": "^4.1.1",
     "tap-diff": "^0.1.1",
     "tape": "^4.6.3",
     "webpack": "^2.3.3",
@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "body-parser": "^1.15.2",
+    "bulma": "^0.5.3",
     "express": "^4.14.0"
   }
 }
