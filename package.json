@@ -1,8 +1,8 @@
 {
-  "name": "taxonomic-routing",
+  "name": "RAAD",
   "version": "0.1.0",
-  "description": "Using React Router to navigate the taxonomic rank",
-  "repository": "https://github.com/dev-academy-challenges/taxonomic-routing.git",
+  "description": "RADD",
+  "repository": "",
   "main": "server/index.js",
   "scripts": {
     "start": "nodemon --watch server server/index & webpack --watch",
@@ -15,7 +15,7 @@
       "react"
     ]
   },
-  "author": "EDA",
+  "author": "RAAD",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.21.0",
@@ -26,10 +26,10 @@
     "enzyme": "^2.7.0",
     "jsx-loader": "^0.13.2",
     "nodemon": "^1.11.0",
-    "react": "^15.4.2",
-    "react-addons-test-utils": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-router-dom": "^4.1.1",
+    "react": "^16.0.0",
+    "react-addons-test-utils": "^15.6.2",
+    "react-dom": "^16.0.0",
+    "react-router-dom": "^4.2.2",
     "tap-diff": "^0.1.1",
     "tape": "^4.6.3",
     "webpack": "^2.3.3",
