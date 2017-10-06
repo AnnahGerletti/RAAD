@@ -9,7 +9,7 @@ const Inprogress = (props) => {
     <div className='column'>
       <h3> Working on </h3>
       {tasks.map(task => {
-        return < TaskCard key={task.id} moveForward={props.moveForward} task={task} />
+        return < TaskCard key={task.id} moveForward={props.moveForward} moveBackward={props.moveBackward}task={task} />
       })}
     </div>
   )
