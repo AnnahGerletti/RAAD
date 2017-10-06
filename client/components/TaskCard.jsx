@@ -8,6 +8,7 @@ const TaskCard = (props) => {
         <p className="card-header-title">
           {`Task ID:${task.id}`}
         </p>
+        <i style={{ cursor: 'pointer' }} className='fa fa-trash'></i>
       </header>
       <div className="card-content">
         <p className="">

@@ -2,6 +2,7 @@ import React from 'react'
 import { HashRouter as Router, Route } from 'react-router-dom'
 
 import tasks from '../../data/tasks'
+import columns from '../../data/columns'
 
 import Todo from './Todo'
 import Inprogress from './Inprogress'
@@ -28,12 +29,12 @@ class Container extends React.Component {
   }
 
   render () {
+    const filterTasks = (col_id) => this.state.tasks.filter(task => task.currentCol === col_id)
     return (
       <div className = 'columns'>
-        <Todo moveForward={this.moveForward} tasks={this.state.tasks.filter(task => task.currentCol === 0)} />
-        <Inprogress moveForward={this.moveForward} tasks={this.state.tasks.filter(task => task.currentCol === 1)}/>
-        <Blocked moveForward={this.moveForward} tasks={this.state.tasks.filter(task => task.currentCol === 2)} />
-        <Done moveForward={this.moveForward} tasks={this.state.tasks.filter(task => task.currentCol === 3)} />
+        {columns.map(column => 
+          <Todo title={column.title} moveForward={this.moveForward} tasks={filterTasks(column.col_id)} />
+        )}
       </div>
     )
   }

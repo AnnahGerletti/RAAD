@@ -7,7 +7,7 @@ import Container from './Container'
 const App = (props) => {
   return (
     <Router>
-      <div className=''>
+      <div className='container has-text-centered'>
         <Route path="/" component={Header} />
         <Route path="/" component={Container} />
       </div>
