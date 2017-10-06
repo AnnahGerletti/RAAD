@@ -2,6 +2,7 @@ import React from 'react'
 import { HashRouter as Router, Route } from 'react-router-dom'
 
 import tasks from '../../data/tasks'
+
 import Todo from './Todo'
 import Inprogress from './Inprogress'
 import Blocked from './Blocked'
@@ -13,15 +14,26 @@ class Container extends React.Component {
     this.state = {
       tasks: tasks
     }
+    this.moveForward = this.moveForward.bind(this)
+  }
+
+  moveForward (id) {
+    const idd = tasks.findIndex((task) => {
+      return task.id === id
+    })
+    const newTasks = this.state.tasks.concat()
+
+    newTasks[idd].currentCol += 1
+    this.setState({tasks: newTasks})
   }
 
   render () {
     return (
       <div className = 'columns'>
-        <Todo tasks={this.state.tasks.filter(task => task.currentCol === 0)} />
-        <Inprogress tasks={this.state.tasks.filter(task => task.currentCol === 1)}/>
-        <Blocked tasks={this.state.tasks.filter(task => task.currentCol === 2)} />
-        <Done tasks={this.state.tasks.filter(task => task.currentCol === 3)} />
+        <Todo moveForward={this.moveForward} tasks={this.state.tasks.filter(task => task.currentCol === 0)} />
+        <Inprogress moveForward={this.moveForward} tasks={this.state.tasks.filter(task => task.currentCol === 1)}/>
+        <Blocked moveForward={this.moveForward} tasks={this.state.tasks.filter(task => task.currentCol === 2)} />
+        <Done moveForward={this.moveForward} tasks={this.state.tasks.filter(task => task.currentCol === 3)} />
       </div>
     )
   }
