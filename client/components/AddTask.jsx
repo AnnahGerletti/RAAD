@@ -16,7 +16,7 @@ class AddTask extends React.Component {
 
 handleAdd(event){
   const newTask = this.state
-
+  
 }
   }
   render () {

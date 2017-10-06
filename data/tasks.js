@@ -1,15 +1,23 @@
 const tasks = [
   {
-    id: 0,
+    id:  1,
     taskname: 'task1',
-    colName: 'todo',
-    col_State: 0
+    currentCol: 0
   },
   {
-    id: 1,
-    taskname: 'task1',
-    colName: 'done',
-    col_State: 1
+    id: 2,
+    taskname: 'task2',
+    currentCol: 1
+  },
+  {
+    id: 3,
+    taskname: 'task3',
+    currentCol: 2
+  },
+  {
+    id: 4,
+    taskname: 'task4',
+    currentCol: 3
   }
 ]
 

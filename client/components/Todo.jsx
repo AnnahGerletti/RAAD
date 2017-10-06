@@ -2,11 +2,16 @@ import React from 'react'
 
 import TaskCard from './TaskCard'
 
-const Todo = () => {
+const Todo = (props) => {
+  const tasks = props.tasks
+
   return (
     <div className='column'>
       <h3> Todo List </h3>
-      < TaskCard />
+      {tasks.map(task => {
+        return < TaskCard key={task.id} task={task} />
+      })
+      }
     </div>
   )
 }

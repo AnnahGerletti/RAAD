@@ -1,9 +1,15 @@
 import React from 'react'
 
-const Done = () => {
+import TaskCard from './TaskCard'
+
+const Done = (props) => {
+  const tasks = props.tasks
   return (
     <div className = 'column'>
       <h3> Finished </h3>
+      {tasks.map(task => {
+        return <TaskCard key={task.id} task={task} />
+      })}
     </div>
   )
 }
