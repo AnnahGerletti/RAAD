@@ -28,12 +28,13 @@ class Container extends React.Component {
   }
 
   render () {
+    const filterTasks = (col_id) => this.state.tasks.filter(task => task.currentCol === col_id)
     return (
       <div className = 'columns'>
-        <Todo title="To-Do" moveForward={this.moveForward} tasks={this.state.tasks.filter(task => task.currentCol === 0)} />
-        <Todo title="In Progress" moveForward={this.moveForward} tasks={this.state.tasks.filter(task => task.currentCol === 1)}/>
-        <Todo title="Blocked" moveForward={this.moveForward} tasks={this.state.tasks.filter(task => task.currentCol === 2)} />
-        <Todo title="Done" moveForward={this.moveForward} tasks={this.state.tasks.filter(task => task.currentCol === 3)} />
+        <Todo title="To-Do" moveForward={this.moveForward} tasks={filterTasks(0)} />
+        <Todo title="In Progress" moveForward={this.moveForward} tasks={filterTasks(1)}/>
+        <Todo title="Blocked" moveForward={this.moveForward} tasks={filterTasks(2)} />
+        <Todo title="Done" moveForward={this.moveForward} tasks={filterTasks(3)} />
       </div>
     )
   }
