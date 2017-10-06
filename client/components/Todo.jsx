@@ -3,14 +3,17 @@ import React from 'react'
 import TaskCard from './TaskCard'
 
 const Todo = (props) => {
-  const tasks = props.tasks
-
   return (
-    <div className='column'>
-      <h3> Todo List </h3>
-      {tasks.map(task => {
-        return < TaskCard key={task.id} moveForward={props.moveForward} moveBackward={props.moveBackward}task={task} />
-      })}
+    <div className='column container is-outlined box has-text-centered' >
+      <span className='tile is-parent is-primary'>
+        <h3 className='title is-3'>{props.title}</h3>
+      </span>
+      <hr />
+      <div className='content'>
+        {props.tasks.map(task => {
+            return < TaskCard key={task.id} moveBackward={props.moveBackward} moveForward= {props.moveForward} task={task} />
+        })}
+      </div>
     </div>
   )
 }
