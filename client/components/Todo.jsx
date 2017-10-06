@@ -11,7 +11,7 @@ const Todo = (props) => {
       <hr />
       <div className='content'>
         {props.tasks.map(task => {
-          return < TaskCard key={task.id} moveForward= {props.moveForward} task={task} />
+            return < TaskCard key={task.id} moveBackward={props.moveBackward} moveForward= {props.moveForward} task={task} />
         })}
       </div>
     </div>

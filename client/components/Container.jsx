@@ -16,16 +16,28 @@ class Container extends React.Component {
       tasks: tasks
     }
     this.moveForward = this.moveForward.bind(this)
+    this.moveBackward = this.moveBackward.bind(this)
   }
 
+  
   moveForward (id) {
     const idd = tasks.findIndex((task) => {
       return task.id === id
     })
     const newTasks = this.state.tasks.concat()
-
+    
     newTasks[idd].currentCol += 1
     this.setState({tasks: newTasks})
+  }
+  
+  moveBackward(id) {
+    const idd = tasks.findIndex((task) => {
+      return task.id === id
+    })
+    const newTasks = this.state.tasks.concat()
+
+    newTasks[idd].currentCol -= 1
+    this.setState({ tasks: newTasks })
   }
 
   render () {
@@ -33,7 +45,7 @@ class Container extends React.Component {
     return (
       <div className = 'columns'>
         {columns.map(column => 
-          <Todo title={column.title} moveForward={this.moveForward} tasks={filterTasks(column.col_id)} />
+          <Todo title={column.title} moveBackward={this.moveBackward} moveForward={this.moveForward} tasks={filterTasks(column.col_id)} />
         )}
       </div>
     )
