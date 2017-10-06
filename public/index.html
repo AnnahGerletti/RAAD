@@ -5,15 +5,86 @@
   <title>RAAD</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/main.css">
 
 </head>
+<header>
+  <div class="tabs is-toggle is-fullwidth is-large">
+    <ul>
+      <li class="is-dark">
+        <a>
+          <span class="icon">
+            <i class="fa fa-home fa-fw"></i>
+          </span>
+          <span>Home</span>
+        </a>
+      </li>
+      <li>
+        <a>
+          <span class="icon">
+            <i class="fa fa-github"></i>
+          </span>
+          <span>github</span>
+        </a>
+      </li>
+      <li>
+        <a>
+          <span class="icon">
+            <i class="fa fa-book fa-fw"></i>
+          </span>
+          <span>Group tasks</span>
+          <span class="icon is-small">
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a>
+          <span class="icon">
+            <i class="fa fa-file-text-o"></i>
+          </span>
+          <span>Documents</span>
+          <span class="icon is-small">
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="container level-right">
+    <div class="content has-text-centered">
+      <div class="field is-grouped level-right">
+        <p class="control">
+          <a class="button is-dark">Logout</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</header>
 <body >
   <section class="section">
     <div class="container">
-      <div id="app" class=''</div>
+      <div id="app" class=''></div>
     </div>
   </section>
   <script src="bundle.js"></script>
 </body>
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-centered">
+          <p>
+            <strong>RAAD</strong> by
+            <a href="http://jgthms.com">Team Unicorn</a>. The source code is licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content is licensed
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+          </p>
+          <p>
+            <a class="icon" href="https://github.com/aaron-macdonald/RAAD">
+              <i class="fa fa-github"></i>
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
 </html>

@@ -2,11 +2,16 @@ import React from 'react'
 
 import TaskCard from './TaskCard'
 
-const Todo = () => {
+const Todo = (props) => {
   return (
-    <div className='column'>
-      <h3> Todo List </h3>
-      < TaskCard />
+    <div className='column container is-outlined box has-text-centered' >
+      <span className='tile is-parent is-primary'>
+        <div className='content'>
+          <h3 className='title is-3'>{props.title}</h3>
+          <hr />
+          <TaskCard />
+        </div>
+      </span>
     </div>
   )
 }

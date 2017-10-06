@@ -9,7 +9,7 @@ import tasks from '../../data/tasks'
 const App = () => {
   return (
     <Router>
-      <div className=''>
+      <div className='container has-text-centered'>
         <Route path="/" component={Header} />
         <Route path="/" render ={ () => (
           <Container tasks = {(tasks)} />

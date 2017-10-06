@@ -6,7 +6,7 @@ class TaskCard extends React.Component {
     this.state = {
       col_State: 0
     }
-    this.moveForward =this.moveForward.bind(this)
+    this.moveForward = this.moveForward.bind(this)
   }
   moveForward () {
     this.setState({
@@ -17,9 +17,10 @@ class TaskCard extends React.Component {
     return (
       <div className="card is-primary">
         <header className="card-header">
-          <p className="card-header-title">
-            Task 1
-          </p>
+          <h4 className="card-header-title">
+          Task 1
+          </h4>
+          <i style={{cursor: 'pointer'}} className='fa fa-trash'></i>
         </header>
         <div className="card-content">
           <p className="">
@@ -27,9 +28,9 @@ class TaskCard extends React.Component {
           </p>
         </div>
         <footer className="card-footer">
-          <button className="card-footer-item">-</button>
-          <button className="card-footer-item">Edit</button>
-          <button className="card-footer-item" onClick={this.moveForward}>+</button>
+          <button className="button is-dark is-medium card-footer-item">-</button>
+          <button className="button is-dark is-medium card-footer-item">Edit</button>
+          <button className="button is-dark is-medium card-footer-item" onClick={this.moveForward}>+</button>
         </footer>
       </div>
     )
