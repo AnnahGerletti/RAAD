@@ -17,7 +17,7 @@ const TaskCard = (props) => {
       <footer className="card-footer">
         <button className="card-footer-item">-</button>
         <button className="card-footer-item">Edit</button>
-        <button className="card-footer-item">+</button>
+        <button onClick={() => props.moveForward(task.id)} className="card-footer-item">+</button>
       </footer>
     </div>
   )
