@@ -2,16 +2,15 @@ import React from 'react'
 
 import TaskCard from './TaskCard'
 
-const Done = () => {
+const Done = (props) => {
+  const tasks = props.tasks
+
   return (
-    <div className='column container is-outlined box has-text-centered' style={{ minHeight: '60vh' }}>
-      <span className='tile is-parent is-primary'>
-        <div className='content'>
-          <h3 className='title is-3'>Finished</h3>
-          <hr />
-          <TaskCard />
-        </div>
-      </span>
+    <div className = 'column'>
+      <h3> Finished </h3>
+      {tasks.map(task => {
+        return < TaskCard key={task.id} moveForward={props.moveForward} task={task} />
+      })}
     </div>
   )
 }
