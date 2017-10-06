@@ -16,9 +16,10 @@ const TaskCard = (props) => {
         </p>
       </div>
       <footer className="card-footer">
-        <button onClick={() => props.moveBackward(task.id)}className="card-footer-item">-</button>
-        <button className="card-footer-item">Edit</button>
-        <button onClick={() => props.moveForward(task.id)} className="card-footer-item">+</button>
+        
+        <button onClick={() => props.moveBackward(task.id)} className="card-footer-item button is-dark">-</button>
+        <button className="card-footer-item button is-dark">Edit</button>
+        <button onClick={() => props.moveForward(task.id)} className="card-footer-item button is-dark">+</button>
       </footer>
     </div>
   )
